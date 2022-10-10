@@ -6,8 +6,8 @@ namespace UIdsComparer
     {
         private static void Main(string[] args)
         {
-            var statusComparer = new StatusComparer.StatusComparer();
-            statusComparer.Run();
+            var program = new StatusComparer.StatusComparer();
+            program.Run();
         }
     }
 }
