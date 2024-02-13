@@ -12,13 +12,14 @@ namespace UIdsComparer.StatusComparer
     
     public class StatusComparer
     {
-        private const string ClientId = "hippouz";
-        private const string ClientSecret = "TUNj5ayZWR7aZp9B";
+        // here and other keys/domains have been changed to fake data
+        private const string ClientId = "fakeClientId";
+        private const string ClientSecret = "fakeClientSecret";
 
         public void Run()
         {
             var client = new HttpClient();
-            client.BaseAddress = new Uri("https://s0.rouming.uz");
+            client.BaseAddress = new Uri("https://fakeaddress.com");
             var authenticationString = $"{ClientId}:{ClientSecret}";
             var base64EncodedAuthenticationString = Convert.ToBase64String(System.Text.Encoding.ASCII.GetBytes(authenticationString));
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", base64EncodedAuthenticationString);
